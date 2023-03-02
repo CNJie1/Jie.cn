@@ -298,17 +298,17 @@ a {
 		<div :class="!ifshow?'onlyTitle ayimgui':'ayimgui'" ref="menuMain">
 			<div class="aytitle" @touchstart="titleTouchStart" @touchmove="titleTouchMove">
 				<i :class="ifshow?'el-icon-caret-bottom':'el-icon-caret-top'" @click="ifshow = !ifshow"></i>
-				<span class="title-age" style="margin-left:5px;">Pixel Gun 3D Mod Menu 23.1.0</span>
+				<span class="title-age" style="margin-left:5px;">Pixel Gun 3D模组[Jie]</span>
 				<i class="titleClose el-icon el-icon-close" @click="closeimgui"></i>
 			</div>
 			<div class="aybody">
 				<div class="aytab">
 					<span @click="changeTab('one')"
-						:style="{background:tabValue==='one'?'#f0b1b1':'#d0bdbd'}">Mods</span>
+						:style="{background:tabValue==='one'?'#f0b1b1':'#d0bdbd'}">功能</span>
           <span @click="changeTab('two')"
-						:style="{background:tabValue==='two'?'#f0b1b1':'#d0bdbd'}">Settings</span>
+						:style="{background:tabValue==='two'?'#f0b1b1':'#d0bdbd'}">自定义</span>
 					<span @click="changeTab('three')"
-						:style="{background:tabValue==='three'?'#f0b1b1':'#d0bdbd'}">Others</span>
+						:style="{background:tabValue==='three'?'#f0b1b1':'#d0bdbd'}">其他</span>
 				</div>
 
 				<div v-show="tabValue==='one'">
@@ -349,12 +349,12 @@ a {
 						<br>
 						<p><b>社交</b></p>
 						<a href="" target="_blank"><u>没有</u> - Jie</a>
-						<a href="" target="_blank"><u>没有</u> - u/Jie</a>
-						<a href="" target="_blank"><u>没有</u></a>
+						<a href="" target="_blank"><u>没有</u> - Jie</a>
+						<a href="" target="_blank"><u>没有</u> - Jie</a>
 						<a href="https://github.com/CNJie1" target="_blank"><u>GitHub</u> - Jie</a>
 						<a href=""><u>没有</u> - Jie</a>
             <br>
-            <p><b>疑难 解答 </b></p>
+            <p><b>疑难解答</b></p>
             <p>无法单击外部菜单 - 先关闭菜单</p> <br>
             <p>菜单不起作用 - 尝试按“其他”页面上的重新加载按钮重新加载它</p> <br>
             <p>菜单崩溃 - 此菜单仅适用于越狱设备，如果您越狱，则必须通过存储库安装 H5GG.</p> <br>
@@ -658,10 +658,10 @@ a {
         },
         
         banAccount() {
-          let confirmation = confirm("Are you sure you want to ban your account? This action is permanent and your account will be inaccessible. Please note that you will not be able to recover your account once it is deleted or banned.");
+          let confirmation = confirm("您确定要禁止您的帐户吗?操作是永久性的,的帐户将无法访问.注意,旦您的帐户被删除或禁止，您将无法恢复您的帐户.");
           if (confirmation) {
             console.log("Confirmation");
-            alert("Final warning! Your account will be banned after this confirmation! Exit the app to cancel or confirm to ban.");
+            alert("最后的警告!认后,的帐户将被禁止!用以取消或确认禁止.");
             this.banaccountcheck = true;
             h5gg.searchNumber("69", "F32", "0x00000000", "0x200000000");
             h5gg.editAll("1", "F32");
