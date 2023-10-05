@@ -16,6 +16,43 @@
         <link rel="shortcut icon" type="image/x-icon" href="https://i.ibb.co/ZTMKSH6/Jie.jpg">
         <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     </header>
+    <script>
+        	var app = new Vue({
+			el: "#app",
+			mounted() {
+				this.setRect(360, 320);
+        setButtonImage("https://i.ibb.co/zxYnp3D/Jie.jpg");
+				setWindowDrag(0, 0, 0, 0);
+    
+				var layout = function()
+				{
+					if(window.lastorientation==window.orientation) return;
+					window.lastorientation=window.orientation;
+				
+					if(Math.abs(window.orientation)==90) {
+						setWindowRect(0,0,window.screen.height,window.screen.width);
+					} else {
+						setWindowRect(0,0,window.screen.width,window.screen.height);
+					}
+				}
+	
+				layout();
+				window.addEventListener("orientationchange", layout, false);
+
+				setButtonAction(function () {
+					var menu = document.querySelector("#app");
+					if (menu.style.display == 'none') {
+						menu.style.display = 'block';
+						setWindowTouch(true);
+					} else {
+						menu.style.display = 'none';
+						setWindowTouch(false);
+					}
+				});
+			},
+		
+		});
+    </script>
     <style>
         * {
             padding: 0;
